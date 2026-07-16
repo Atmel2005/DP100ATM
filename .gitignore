@@ -4,6 +4,9 @@
 # Except these files
 !publish/PowerSupplyGui.exe
 !foto.png
+!DC-Typec cable.png
+!DP100 Digital Power Supply User manual V1.3.pdf
+!DP100_V1.5.atk
 !README.md
 !LICENSE
 !.gitignore
