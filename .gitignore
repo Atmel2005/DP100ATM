@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# Except these files
+!publish/PowerSupplyGui.exe
+!foto.png
+!README.md
+!LICENSE
+!.gitignore
