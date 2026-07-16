@@ -1,4 +1,4 @@
-# PowerSupplyGui — Альтернативное ПО для ATK-DP100
+# PowerSupplyGui — Alternative Software für ATK-DP100
 
 ## Deutsch
 
