@@ -2,7 +2,7 @@
 
 ## Русский
 
-Альтернативное приложение для управления программируемым блоком питания **Alientek ATK-DP100** (USB-C PD, 0-30V / 0-5A). Написано на C# / WPF (.NET 9). Полностью совместимо с оригинальным протоколом HID-коммуникации.
+Альтернативное приложение для управления программируемым блоком питания **Alientek ATK-DP100** (USB-C PD, 0-30V / 0-5A). Полностью совместимо с оригинальным протоколом HID-коммуникации.
 
 ### Оборудование
 
@@ -10,13 +10,12 @@
 - Компьютер с Windows (x64)
 - Стандартный USB-C кабель
 
-### Драйверы
+### Драйверы и настройка
 
 Драйверы не требуются. Приложение использует библиотеку HidSharp для прямого доступа к USB HID-интерфейсу блока питания.
 
 ### Основные возможности (Преимущества по сравнению с оригинальным ПО)
 
-- **MVVM-архитектура**: Чистое разделение логики и представления, потокобезопасная работа с HID (Mutex)
 - **Графики в реальном времени**: Построение графиков напряжения и тока с возможностью масштабирования
 - **Статистика**: Среднее, максимальное, минимальное значение, размах (peak-to-peak) для напряжения и тока
 - **Накопление энергии**: Подсчёт потреблённой энергии в ватт-часах (Wh)
@@ -27,21 +26,7 @@
 - **CSV-логирование**: Запись напряжения, тока и мощности в CSV-файл
 - **Три языка**: Русский, Английский, Немецкий (с сохранением выбора)
 - **Настройки устройства**: OTP, OPP, яркость, громкость, RPP, авто-включение
-- **Нет зависимости от сторонних exe**: Полностью автономная работа, без Reflection-хаков
-
-### Сборка
-
-```bash
-# Клонировать репозиторий
-git clone https://github.com/user/PowerSupplyGui.git
-cd PowerSupplyGui
-
-# Собрать
-dotnet build -c Release
-
-# Опубликовать (самодостаточный exe)
-dotnet publish -c Release -r win-x64 --self-contained -p:PublishSingleFile=true
-```
+- **Полностью автономная работа**: Не требует оригинальный ATK-DP100.exe
 
 ### Использование
 
@@ -54,7 +39,7 @@ dotnet publish -c Release -r win-x64 --self-contained -p:PublishSingleFile=true
 
 ## English
 
-An alternative application for controlling the **Alientek ATK-DP100** programmable power supply (USB-C PD, 0-30V / 0-5A). Written in C# / WPF (.NET 9). Fully compatible with the original HID communication protocol.
+An alternative application for controlling the **Alientek ATK-DP100** programmable power supply (USB-C PD, 0-30V / 0-5A). Fully compatible with the original HID communication protocol.
 
 ### Hardware
 
@@ -62,13 +47,12 @@ An alternative application for controlling the **Alientek ATK-DP100** programmab
 - Windows PC (x64)
 - Standard USB-C cable
 
-### Drivers
+### Drivers & Setup
 
 No drivers required. The application uses the HidSharp library for direct USB HID access.
 
 ### Key Features (Advantages over the Original Software)
 
-- **MVVM Architecture**: Clean separation of logic and UI, thread-safe HID communication (Mutex)
 - **Real-time Graphs**: Voltage and current plotting with zoom/pan support
 - **Statistics**: Average, max, min values, peak-to-peak for voltage and current
 - **Energy Accumulation**: Consumed energy tracking in watt-hours (Wh)
@@ -79,16 +63,7 @@ No drivers required. The application uses the HidSharp library for direct USB HI
 - **CSV Logging**: Record voltage, current and power to CSV files
 - **Three Languages**: Russian, English, German (with saved preference)
 - **Device Settings**: OTP, OPP, backlight, volume, RPP, auto-on
-- **No External Dependencies**: Fully standalone, no Reflection hacks or third-party exe required
-
-### Build
-
-```bash
-git clone https://github.com/user/PowerSupplyGui.git
-cd PowerSupplyGui
-dotnet build -c Release
-dotnet publish -c Release -r win-x64 --self-contained -p:PublishSingleFile=true
-```
+- **Fully Standalone**: No dependency on the original ATK-DP100.exe
 
 ### Usage
 
@@ -101,7 +76,7 @@ dotnet publish -c Release -r win-x64 --self-contained -p:PublishSingleFile=true
 
 ## Deutsch
 
-Eine alternative Anwendung zur Steuerung des programmierbaren Netzteils **Alientek ATK-DP100** (USB-C PD, 0-30V / 0-5A). Geschrieben in C# / WPF (.NET 9). Vollständig kompatibel mit dem originalen HID-Kommunikationsprotokoll.
+Eine alternative Anwendung zur Steuerung des programmierbaren Netzteils **Alientek ATK-DP100** (USB-C PD, 0-30V / 0-5A). Vollständig kompatibel mit dem originalen HID-Kommunikationsprotokoll.
 
 ### Hardware
 
@@ -109,13 +84,12 @@ Eine alternative Anwendung zur Steuerung des programmierbaren Netzteils **Alient
 - Windows-PC (x64)
 - Standard-USB-C-Kabel
 
-### Treiber
+### Treiber & Einrichtung
 
 Keine Treiber erforderlich. Die Anwendung verwendet die HidSharp-Bibliothek für direkten USB-HID-Zugriff.
 
 ### Hauptfunktionen (Vorteile gegenüber dem Original-Programm)
 
-- **MVVM-Architektur**: Saubere Trennung von Logik und Darstellung, thread-sichere HID-Kommunikation (Mutex)
 - **Echtzeit-Diagramme**: Spannungs- und Stromdiagramme mit Zoom-Unterstützung
 - **Statistik**: Durchschnitts-, Maximal-, Minimalwerte und Spitze-Spitze für Spannung und Strom
 - **Energie-Akkumulation**: Verbrauchsmessung in Wattstunden (Wh)
@@ -126,16 +100,7 @@ Keine Treiber erforderlich. Die Anwendung verwendet die HidSharp-Bibliothek für
 - **CSV-Logging**: Spannung, Strom und Leistung in CSV-Dateien aufzeichnen
 - **Drei Sprachen**: Russisch, Englisch, Deutsch (mit gespeicherter Einstellung)
 - **Geräte-Einstellungen**: OTP, OPP, Helligkeit, Lautstärke, RPP, Auto-On
-- **Keine externen Abhängigkeiten**: Vollständig eigenständig, ohne Reflection-Hacks oder Drittanbieter-Exe
-
-### Kompilierung
-
-```bash
-git clone https://github.com/user/PowerSupplyGui.git
-cd PowerSupplyGui
-dotnet build -c Release
-dotnet publish -c Release -r win-x64 --self-contained -p:PublishSingleFile=true
-```
+- **Vollständig eigenständig**: Keine Abhängigkeit vom originalen ATK-DP100.exe
 
 ### Nutzung
 
